@@ -1,0 +1,66 @@
+<%- include("header") %>
+
+<link rel="stylesheet" href="../../public/css/style.css" />
+
+  <div class="nav" id="nav">
+    <div class="topNav">
+      <div class="navleft">
+        <i class="bi bi-search"></i>
+        <!-- <input type="text" placeholder="search..." /> -->
+      </div>
+      <div class="user">
+        <div class="bell">
+          <div class="notify"></div>
+          <i class="far fa-bell"></i>
+        </div>
+        <img src="../../public/img/green.jpg" class="avator" alt="avator" />
+        <p class="btn drop_">
+          Dr. Naveen 
+          <i class="fas fa-angle-down" style="position: absolute"></i>
+        </p>
+      </div>
+
+      <div class="btn drop">
+        <li><a class="dropdown-item drop_" href="https://vtop.vitbhopal.ac.in/vtop/login">Profile</a></li>
+        <li><a class="dropdown-item drop_" href="https://vtop.vitbhopal.ac.in/vtop/login">Setting</a></li>
+        <li><a class="dropdown-item drop_ logout" href="/logout">Logout</a></li>
+      </div>
+    </div>
+    <!--  -->
+    <hr />
+    <div class="sideNav">
+      <div class="arrow_R btn">
+        <i class="fas fa-bars" id="bar"></i>
+      </div>
+      <a href="/home" class="icons">
+        <i class="fas fa-user-md"></i>
+        <h4>Home</h4>
+      </a>
+      <a href="/add" class="icons">
+        <i class="fas fa-plus"></i>
+        <h4>Add Student</h4>
+      </a>
+      <a href="/search" class="icons">
+        <i class="fas fa-search"></i>
+        <h4>Search Student</h4>
+      </a>
+      <a href="/update" class="icons">
+        <i class="fas fa-pen-square"></i>
+        <h4>Update Student</h4>
+      </a>
+      <a href="/delete" class="icons del">
+        <i class="fas fa-trash"></i>
+        <h4>Delete Student</h4>
+      </a>
+    </div>
+  </div> 
+
+
+ <!-- script -->
+ <script
+ src="https://code.jquery.com/jquery-3.6.0.js"
+ integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+ crossorigin="anonymous"
+></script>
+<script src="../public/js/functions.js"></script>
+    

@@ -1,0 +1,83 @@
+<%- include("partails/nav") %>
+
+<div class="containerBox">
+  <div class="container">
+    <form  id="form" action="/home" method="post">
+        <h1 >Add Student</h1>
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label>ID</label>
+            <input type="text" name="patientId" class="form-control" placeholder="patient id" />
+          </div>
+          <div class="form-group col-md-6">
+            <label>Name</label>
+            <input type="text" name="name" class="form-control" placeholder="patient name" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label>Age</label>
+            <input type="number" name="age" class="form-control" placeholder="patient age" />
+          </div>
+          <div class="form-group col-md-6">
+            <label>Mobile Number</label>
+            <input type="number" name="mobileNo" class="form-control" placeholder="mobile number" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label>E-mail Address</label>
+            <input type="email" name="email" class="form-control" placeholder="Email Address" />
+          </div>
+          <div class="form-group col-md-6">
+            <label>Next Appointment Date</label>
+            <input type="datetime-local" name="date" class="form-control" placeholder="Date of Appointment" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label>Address</label>
+            <input
+            type="text"
+            name="address"
+            class="form-control"
+            placeholder="Apartment, studio, or floor"
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label>Disease</label>
+            <input
+              type="text"
+              name="disease"
+              class="form-control"
+              placeholder="disease name"
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group col-md-3">
+            <label>Fees</label>
+            <input
+            type="number"
+            name="fees"
+            class="form-control"
+            placeholder="Total fees"
+            />
+          </div>
+        </div>
+
+        <div class=" d-flex justify-content-center mt-5">
+          <button type="submit" class="btn btn-primary ">Add</button>
+        </div>
+        <br>
+      </form>
+    </div>
+</div>
+
+
+
+</body>
+</html>

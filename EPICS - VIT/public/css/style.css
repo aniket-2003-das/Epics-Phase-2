@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap");
+
+
+body{
+  overflow-x: hidden;
+}
+
+.topNav {
+  position: absolute;
+  width: 100vw;
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+
+.navleft {
+  margin-left: 80px;
+}
+
+.navleft i {
+  font-size: x-large;
+}
+
+.navleft input {
+  border: none;
+  outline: none;
+  height: 50px;
+  margin-left: 10px;
+  width: 300px;
+  border-radius: 10px;
+  background-color: #f5fdf9;
+}
+
+input::placeholder {
+  padding-left: 10px;
+}
+
+.avator {
+  box-shadow: rgba(0, 140, 255, 0.2) 0px 2px 8px 0px;
+}
+
+.containerBox {
+  /* margin-left: 60px; see for home page*/
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 650px) {
+  .navleft input {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 545px) {
+
+.time h1{
+  font-size: 30px !important;
+}
+.date{
+  width: fit-content;
+}
+  .containerBox {
+    margin-left: 0;
+    margin-bottom: 200px;
+  }
+  hr {
+    margin-top: 110px !important;
+  }
+  .arrow_R {
+    margin-top: 20px !important;
+    margin-bottom: 0px !important ;
+  }
+
+  .topNav {
+    flex-direction: column;
+    text-align: center;
+  }
+  .user {
+    justify-content: space-between;
+    margin: auto 80px;
+  }
+}
+
+@media screen and (max-width: 308px) {
+  .user {
+    margin: auto 60px;
+  }
+}
+
+.user {
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.user * {
+  margin: 5px;
+}
+
+.bell {
+  position: relative;
+}
+
+.notify {
+  height: 6.5px;
+  width: 6.5px;
+  position: absolute;
+  top: 3.5px;
+  background: #007dfa;
+  border-radius: 100%;
+}
+
+.user img {
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+}
+
+.drop {
+  position: absolute;
+  right: 30px;
+  top: -200px;
+  background: #eceef1;
+  z-index: 10;
+  transition: 0.5s;
+}
+.dropdown-item {
+  transition: 0.5s;
+  margin: 5px auto;
+}
+.dropdown-item:hover {
+  border-radius: 5px;
+  background: white;
+}
+.logout:hover {
+  background-color: tomato;
+}
+
+hr {
+  width: 100%;
+  margin-top: 70px;
+  height: 3px !important;
+  color: lightgray;
+}
+
+.sideNav {
+  position: absolute;
+  width: 60px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: #0e0e0e;
+  transition: 0.5s;
+}
+
+@media screen and (min-width: 545px) {
+  .sideNav {
+    height: 100vh !important;
+  }
+}
+
+.sideNav > .icons {
+  color: #aec4da;
+  display: block;
+  font-size: x-large;
+  margin-top: 40px;
+  margin-left: 4px;
+  position: relative;
+  padding-left: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.icons:hover {
+  color: #86e624;
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.del:hover {
+  color: tomato;
+}
+
+.icons > h4 {
+  position: absolute;
+  top: 4px;
+  left: 40px;
+}
+
+.arrow_R {
+  color: #eaf2fa;
+  font-size: xx-large;
+  margin: 10px auto 50px auto;
+  transition: 0.5s;
+}
+.arrow_R:hover {
+  transition: 0.3s;
+  color: #86e624;
+}
+
+/* .container form{
+  margin-left: 45% !important;
+} */
+.container form {
+  margin-left: 5% !important;
+  /* margin-left: 60px !important; */
+}
+
+.containerBox input {
+  border: none;
+  outline: none;
+  height: 50px;
+  border-radius: 10px;
+  margin: 10px !important;
+  background-color: #e4fff2;
+}
+
+input::placeholder {
+  padding-left: 10px;
+}

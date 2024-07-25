@@ -1,0 +1,203 @@
+<%- include("partails/header") %>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<div class="DataContainer">
+    
+<form action="/home" method="get">
+    <button class="cBtn cbtn">
+        <i class="fas fa-arrow-left"></i>
+    </button>
+</form>
+    
+    <div class="Day_report">
+        
+        <div class="date">
+            <!-- <h4>Report Date : <%= date %></h4> -->
+            <h3>Yesterday Report</h3>
+        </div>
+
+        <div class="sub1" >
+            <h5>Total Income Aomunt : <b><%= totalIncomeAmount %>.Rs</b></h5>
+            <h5>Avrage Income Aomunt : <b><%= avrageIncome %>.Rs</b></h5>
+            <h5>Patientions Count : <b><%= PatientionsCount %></b> </h5>
+        </div>
+
+        <div class="sub2">
+            <h5>Over-reported Disease : <b><%= Over_reported_disease %></b></h5>
+            <h5>Reported All Disease : <b><%= allDisease %></b></h5>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="income">
+        
+        <!-- income chart -->
+    <div class="dalilyInc">
+        <h6>Last 7 Day's Income:</h6>
+        <canvas id="myChart" style="width:100%;max-width:600px;height: 300px;"></canvas>
+    </div>
+
+    <!-- avarage income -->
+    <div class="avgInc">
+        <h6>Last 7 Day's Average Income:</h6>
+    <canvas id="myChart2" style="width:100%;max-width:600px;height: 300px;"></canvas>
+    </div>
+</div>
+
+    
+    <script>
+        var xValues =  <%- JSON.stringify( last7Days ) %>
+    </script>
+
+        <script>
+
+        var bar_ctx = document.getElementById('myChart').getContext('2d');
+
+        var background_1 = bar_ctx.createLinearGradient(0, 0, 0, 600);
+        background_1.addColorStop(0, 'red');
+        background_1.addColorStop(1, 'blue');
+
+        var yValues = <%- JSON.stringify( last7daysIncome ) %>
+        var barColors = [background_1];
+
+        new Chart("myChart", {
+            type: "bar",
+          data: {
+              labels: xValues,
+              datasets: [{ 
+                  label: "Income",
+                  backgroundColor: barColors,
+                  data: yValues
+                }]
+            },
+        options: {
+            legend: { display: false },
+            title: {
+              display: true,
+              text: "Last 7 Day's income"
+             }
+            },
+        
+    });
+        </script>
+
+
+    <!--  -->
+
+        <script>
+
+var bar_ctx = document.getElementById('myChart2').getContext('2d');
+
+var background_2 = bar_ctx.createLinearGradient(0, 0, 0, 600);
+        background_2.addColorStop(0, 'green');
+        background_2.addColorStop(1, 'orange');
+
+
+            var yValues = <%- JSON.stringify( last7daysAvgIncome ) %>
+            var barColors = [background_2];
+    
+            new Chart("myChart2", {
+                type: "bar",
+              data: {
+                  labels: xValues,
+                  datasets: [{ 
+                      label: "Average Income",
+                      backgroundColor: barColors,
+                      data: yValues
+                    }]
+                },
+            });
+            </script>
+    <!--  -->
+
+    <hr>
+
+    <h6> Last 7 Day's Patientions Count:</h6>
+    <canvas id="myChart3" style="width:100%;max-width:100%;height: 300px;"></canvas>
+
+
+    <script>
+        var bar_ctx = document.getElementById('myChart3').getContext('2d');
+
+        var background_1 = bar_ctx.createLinearGradient(0, 0, 0, 600);
+        background_1.addColorStop(0, 'orange');
+        background_1.addColorStop(1, 'purple');
+
+        var background_2 = bar_ctx.createLinearGradient(0, 0, 0, 600);
+        background_2.addColorStop(0, 'green');
+        background_2.addColorStop(1, 'orange');
+
+        var background_3 = bar_ctx.createLinearGradient(0, 0, 0, 600);
+        background_3.addColorStop(0, 'red');
+        background_3.addColorStop(1, 'blue');
+
+        var background_4 = bar_ctx.createLinearGradient(0, 0, 0, 600);
+        background_4.addColorStop(0, 'green');
+        background_4.addColorStop(1, 'violet');
+
+        
+        var background_5 = bar_ctx.createLinearGradient(0, 0, 0, 600);
+        background_5.addColorStop(0, 'yellow');
+        background_5.addColorStop(1, 'red');
+
+        var yValues = <%- JSON.stringify( last7daysPatientionsCount ) %>
+        var barColors = [background_5];
+
+        new Chart("myChart3", {
+            type: "bar",
+          data: {
+              labels: xValues,
+              datasets: [{ 
+                  label: "Patient",
+                  backgroundColor: barColors,
+                  data: yValues
+                }]
+            },
+        });
+        </script>
+
+
+    <!--  -->
+
+    <hr>
+
+    <h6> Last 7 Day's All Data: </h6>
+    <canvas id="myChart4" style="width:100%;max-width:100%;height: 300px;"></canvas>
+
+<script>
+    
+    new Chart("myChart4", {
+      type: "line",
+      data: {
+        labels: xValues,
+        datasets: [
+            { 
+          label: 'Income',
+          data: <%- JSON.stringify( last7daysIncome ) %>,
+          borderColor: "green",
+          fill: false
+        }, { 
+            label: 'Average Income',
+          data: <%- JSON.stringify( last7daysAvgIncome ) %>,
+          borderColor: "yellow",
+          fill: false
+        }, { 
+            label: 'Cases',
+          data:  <%- JSON.stringify( last7daysPatientionsCount ) %>,
+          borderColor: "blue",
+          fill: false
+        }]
+      },
+      options: {
+        legend: {display: false}
+      }
+    });
+    </script>
+
+</div>
+</body>
+
+</html>

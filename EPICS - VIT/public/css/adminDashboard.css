@@ -1,0 +1,135 @@
+/* Dashboard */
+.Dashboard {
+  display: flex;
+}
+
+/* home page */
+.homePage {
+  display: flex;
+  flex-direction: column;
+}
+.time {
+  margin-top: 20px;
+}
+
+.time h1 {
+  font-size: 70px;
+  font-family: "Londrina Shadow", cursive;
+}
+
+.name,
+.time {
+  margin-left: 10% !important;
+}
+
+.name h3 {
+  font-family: "Fascinate Inline", cursive;
+}
+
+/* button */
+.cBtn {
+  font-weight: 700 !important;
+  margin-top: 10px;
+  height: 50px;
+  width: 100px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px !important;
+  background-color: #86e624 !important;
+}
+
+.cbtn {
+  position: absolute;
+  margin-top: -10px;
+  margin-left: -10px;
+  width: 9%;
+}
+
+.homePage .cBtn {
+  width: 150px !important;
+  margin-left: 10%;
+}
+
+.cBtn:hover {
+  color: white !important;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+/* dashboard template */
+
+.DataContainer {
+  margin: 2%;
+}
+
+.DataContainer hr {
+  width: 98%;
+  margin: auto;
+  height: 3px !important;
+  margin: 20px auto;
+}
+
+.Day_report {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin-top: 25px;
+}
+/* yester day report  */
+.Day_report .date {
+  grid-area: 1 / 1 / 2 / 5;
+  text-align: center;
+  grid-column-gap: 10px;
+
+}
+.sub1 {
+  grid-area: 2 / 1 / 4 / 3;
+}
+.sub2 {
+  grid-area: 2 / 3 / 4 / 5;
+}
+.sub1,
+.sub2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sub1 h5 > b {
+  /* color: #86e624; */
+  color: lightseagreen;
+}
+.sub2 h5 > b {
+  color: #86e624;
+}
+
+/*  incom bar chart */
+.income {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.dalilyInc {
+  grid-area: 1 / 1 / 3 / 2;
+}
+.avgInc {
+  grid-area: 1 / 2 / 3 / 3;
+}
+
+@media screen and (max-width: 900px) {
+  
+  .dalilyInc {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+
+  .avgInc {
+    grid-area: 2 / 1 / 3 / 3;
+  }
+  .cbtn {
+    margin-left: 10px;
+  }
+}

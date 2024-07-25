@@ -1,0 +1,34 @@
+    <%- include("partails/header") %>
+    <link rel="stylesheet" href="../../public/css/login.css" />
+
+    <div class="content">
+      <form action="/" method="post" class="loginPage">
+        <div class="top">
+          <h5>Hospital Management Portal, VIT Bhopal</h5>
+          <div class="round">
+            <p>H</p>
+          </div>
+        </div>
+        <div class="login">
+          <h1 class="text-secondary">LOGIN PAGE</h1>
+          <h5>Enter your Institutional Credentials</h5>
+          <input type="email"  name="username" placeholder="Enter your email" autocomplete="email" required autofocus />
+          <i class="fas fa-envelope"></i>
+          <input type="password" name="password"  class="password" placeholder="Enter your password" required autofocus autocomplete="current-password" >
+          <i class="fas fa-eye-slash " id="eye"></i>
+          <div>
+            <button type="submit" class="btn lgBtn">Log In</button>
+          </div>
+        </div>
+      </form>
+    </div>
+   
+     <!-- script -->
+     <script
+     src="https://code.jquery.com/jquery-3.6.0.js"
+     integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+     crossorigin="anonymous"
+   ></script>
+   <script src="../public/js/functions.js"></script>
+  </body>
+</html>
